@@ -1,4 +1,4 @@
-
+/*Joi validations */
 const JoiVerification = (schema) => {
   return (req, res, next) => {
     const { error } = schema.validate(req.body, { abortEarly: false });
