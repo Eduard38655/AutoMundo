@@ -1,0 +1,180 @@
+*{
+      font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+.HeaderContainer{
+    width:auto;
+    height: 5px;
+    background-color: #1A202C;
+       display: flex;
+    flex-direction: row;
+align-items: center;
+justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+   
+}
+ 
+.HeaderDiv{
+    width: 100%;
+    height: auto;
+        display: flex;
+    flex-direction: row;
+align-items: center;
+justify-content: center;
+    justify-content: space-between;
+ 
+     
+}
+.HeaderDiv h1{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    
+}
+.HeaderDiv h1 span{
+color: #63B3ED;
+ font-weight: 700;
+    font-size: 30px;
+}
+.Div_Ul{
+    width: auto;
+    height: auto;
+      display: flex;
+    flex-direction: row;
+      
+}
+.Div_Ul ul{
+    width: auto;
+    height: auto;
+      display: flex;
+    flex-direction: row;
+     
+}
+.Div_Ul li{
+    width: 90px;
+    height: auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: #E2E8F0;
+    list-style: none; 
+}
+.Div_Ul li:hover{
+    color: #63B3ED;
+}
+.Div_Ul li:focus{
+  text-decoration: underline;
+ text-decoration-thickness: 2px;
+   text-underline-offset: 6px;
+   text-decoration-color: #63B3ED; ;
+}
+ 
+.Link{
+    text-decoration: none;
+}
+
+.Container_Mobile_Inactive{
+    display: none;
+}
+.Container_Mobile_Active{
+    display: none;
+}
+
+@media screen and (max-width: 470px) {
+    .HeaderContainer{display: none;}
+    
+.Container_Mobile_Inactive{
+width: 100%;
+height:auto;
+display: grid;
+background-color: #1A202C;
+ 
+}
+ 
+.DivMobile_Inactive{
+width: 100%;
+height: auto;
+display:grid;
+grid-template-columns: 85% 20px;
+align-items: center;
+justify-content: center;
+}
+
+.DivMobile_Inactive h1{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.DivMobile_Inactive h1 span{
+color: #63B3ED;
+ font-weight: 700;
+    font-size: 30px;
+}
+.DivMobile_Inactive button{
+width: 40px;
+height: 40px;
+background: none;
+font-size: 20px;
+color: gray;
+border: none;
+}
+
+.HeaderDiv_Mobile_Active{
+    width: 50%;
+    height: 1100px;
+    display: flex;
+     flex-direction: row;
+         
+        
+          
+
+}
+ 
+.Div_Ul{
+    width: 100%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+background-color: #1A202C;
+     align-items: center;
+     justify-content: center;
+      border-top: 1px solid gray;
+}
+.Div_Ul ul{
+    width: 87%;
+     height: auto;
+     display: flex;
+    
+     justify-content: center;
+     flex-direction: column; 
+     justify-content: space-around;
+      padding: 5px;
+      
+     
+     
+}
+.Div_Ul ul li{
+    width:auto;
+    height: 27px;
+    padding: 5px;
+    
+    font-size: 15px;
+}
+.Div_Ul ul li:focus{
+background-color: #63B3ED;
+list-style: none;
+text-decoration: none;
+}
+.Div_Ul ul li:hover{
+background-color: #374151;
+border-radius: 5px;
+}
+  
+}
+
+ 

@@ -1,0 +1,110 @@
+*{
+ margin: 0;
+   padding: 0;
+}
+.DivInputs{
+    width: auto;
+height: auto;
+display: flex;
+flex-direction: column;
+   padding: 20px;
+justify-content: space-evenly;
+ 
+}
+
+.DivInputs input{
+    width: 280px;
+    height: 25px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+          background-color: #4A5568;
+     border: 1px solid gray;
+    color: #e5e7ebb3;
+  
+}
+.DivInputs input:focus{
+    outline: none;
+}
+
+label{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+     color: #e5e7ebb3;
+}
+.DivInputs textarea{
+    height:100% ;
+height: 100px;
+padding: 10px;
+border: none;
+font-size: 18px;
+font-weight: 600;
+border-radius: 8px;
+     background-color: #4A5568;
+     border: 1px solid gray;
+         color: #e5e7ebb3;
+}
+.DivInputs textarea:focus{
+    outline: none;
+}
+ 
+button{
+    width: 100%;
+    height: 50px;
+font-size: 18px;
+font-weight: 600;
+border-radius: 8px;
+border: none;
+background-color: #4299E1;
+color: white;
+cursor: pointer;
+}
+button:focus{
+    outline: none;
+}
+
+
+@media screen and (max-width: 470px){
+    
+    .DivInputs input{
+    width: 95%;
+    height: 25px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+          background-color: #4A5568;
+     border: 1px solid gray;
+    color: #e5e7ebb3;
+  
+}
+.DivInputs{
+    width: 100%;
+height: 500px;
+display: flex;
+flex-direction: column;
+ padding: 20px;
+ margin: 0;
+   padding: 0;  
+ 
+ 
+
+ 
+}
+.DivInputs textarea{
+    height:100% ;
+height: 70px;
+padding: 10px;
+border: none;
+font-size: 18px;
+font-weight: 600;
+border-radius: 8px;
+     background-color: #4A5568;
+     border: 1px solid gray;
+         color: #e5e7ebb3;
+}
+}

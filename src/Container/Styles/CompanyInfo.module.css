@@ -1,0 +1,100 @@
+.Company_Container{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+justify-content: space-evenly;
+ 
+}
+.SubCompany_Container{
+    width: 90%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+ background-color: #1f2937;
+    flex-direction: column;
+    padding: 20px;
+      border-radius: 7px;
+}
+.SubCompany_Container h2{
+    font-size: 27px;
+    font-weight: 600;
+    color: #60a5fa;
+}
+.SubCompany_Container .Div_Container{
+    width: 90%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+text-align: center;
+gap: 20px;
+padding: 25px;
+}
+
+.Div_Container div{
+    width: auto;
+    height: 110px;
+    background-color: #374151;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 6px;
+}
+
+.Div_Container div h3{
+    color: #22c55e;
+    font-size: 18px;
+    font-weight: 600;
+}
+.Div_Container div p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #d1d5db;
+}
+ 
+
+@media screen and (max-width: 470px){
+    .Company_Container{
+    width: 100%;
+
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+justify-content: space-evenly;
+ 
+}
+.SubCompany_Container{
+    width: 84%;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+ background-color: #1f2937;
+    flex-direction: column;
+    padding: 20px;
+      border-radius: 7px;
+}
+.SubCompany_Container .Div_Container{
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+text-align: center;
+gap: 20px;
+padding: 25px;
+}
+}

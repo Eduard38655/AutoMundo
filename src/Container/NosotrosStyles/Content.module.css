@@ -1,0 +1,119 @@
+ *{
+ font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.MainContainer{
+    width: auto;
+    height: 100%;
+    display: flex;
+ 
+    flex-direction: column;
+    
+}
+.DivContainer{
+     width: auto;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+ 
+}
+.DivImg{
+    width: 400px;
+    height: 400px;
+    background: url("../../Imagenes/porschemissionx_109.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubContainer{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #374151;
+    padding: 20px;
+    gap: 5px;
+    justify-content: center;
+    justify-content: space-evenly;
+     border-radius: 8px;
+ 
+   
+}
+.SubContainer h2{
+    font-size: 35px;
+    color:#4299E1;
+    text-align: center;
+    font-weight: 700;
+   
+}
+.SubContainer h3{
+     color: #22c55e;
+     font-size: 25px;
+     font-weight: 600;
+}
+.SubContainer p{
+font-size: 15px;
+ color: #e5e7ebb3;
+ font-weight: 600;
+}
+.SubContainer ul li{
+font-size: 15px;
+ color: #e5e7ebb3;
+ font-weight: 600;
+
+}
+.DivDetails{
+    width: 60%;
+    padding: 10px;
+}
+ @media screen and (max-width: 470px) {
+    .MainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+ 
+    flex-direction: column;
+    
+}
+.DivDetails{
+    width: 90%;
+    height: 100%;
+    
+}
+.DivContainer{
+    width: 84%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+   
+ 
+}
+    .SubContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center;
+    justify-content: space-evenly;
+    background-color: #374151;
+    
+    gap: 5px;
+    
+     border-radius: 8px;
+ 
+   
+}
+.DivImg{
+    width: 100%;
+    height: 400px;
+    background: url("../../Imagenes/porschemissionx_109.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ }

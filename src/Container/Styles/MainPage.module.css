@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #111827;
+    scroll-behavior: smooth;
+        max-height: auto;
+     
+}
+
+.AllComponets{
+      width: 100%;
+    height: auto;
+   
+ }
+ @media screen and (max-width: 470px) {
+
+    body{
+    width: 470px;
+    height: auto;
+    background-color: #111827;
+    scroll-behavior: smooth;
+        max-height: auto;
+     display: flex;
+     align-items: center;
+        justify-content: center;
+     flex-direction: column;
+         
+}
+
+.AllComponets{
+      width: 470px;
+    height: auto;
+   display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+ }

@@ -1,0 +1,132 @@
+ *{
+ font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+.ArticleContainer{
+    width: auto;
+    height: auto;
+display: flex;
+flex-direction: column;
+  gap: 30px;
+ 
+ 
+}
+.DivContainer{
+    width: 100%;
+    height:auto;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    flex-direction: column;
+}
+
+.DivSub_Container{
+    width: 610px;
+    height: auto;
+    background-color: #374151;
+    display: flex;
+align-items: center;
+justify-content: center;
+padding: 50px;
+flex-direction:column;
+border-radius: 8px;
+justify-content: space-around;
+   gap: 20px;
+}
+
+.ContainerDetails{
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ContainerDetails h3{
+    color: #22c55e;
+    font-size: 20px;
+    font-weight: 600;
+}
+.ContainerDetails p span{
+    font-weight: 700;
+}
+.ContainerDetails p {
+    font-weight: 200;
+}
+.ContentCars{
+      width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  
+}
+.ContentCars p{width: 100%;
+ }
+ .DivSub_Container h2{
+    font-size: 30px;
+    font-weight: 700;
+      color:#4299E1;
+ }
+ .DivSub_Container p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #e5e7ebb3;
+ 
+ }
+ 
+ 
+@media screen and (max-width: 470px){
+
+    .DivSub_Container{
+    width: 400px;
+    height: auto;
+  margin: 0;
+  padding: 20px;
+ 
+}
+    .ArticleContainer{
+    width: 100%;
+    height: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+  gap: 30px;
+ 
+ 
+}
+.DivContainer{
+   width: 80%;
+    height:auto;
+    display: flex;
+       background-color: #374151;
+    flex-direction: column;
+    
+
+}
+    .ContentCars{
+      width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+  
+}
+.ContainerDetails{
+    width: 100%;
+  
+ }
+ .ContainerDetails{
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+     
+}
+ 
+
+}

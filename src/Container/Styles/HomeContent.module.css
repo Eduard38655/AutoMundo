@@ -1,0 +1,313 @@
+*{
+ font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+.HomeContainer{
+    width: 100%;
+    height: 100%;
+    max-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+ 
+}
+.HomeContainer h2{
+    font-size: 35px;
+    font-weight: 700;
+    color: #3182CE;
+}
+.Container{
+    width: 100%;
+    height: 650px;
+    display: flex;
+      justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+ 
+}
+
+.ContainerDetails{
+     width: 399px;
+    height: 578px;
+    background-color: #374151;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ 
+border-radius: 7px 7px 7px 7px;  
+transform: scale(1);
+transition-duration: 0.3s;
+transition-timing-function: ease-in-out;
+ 
+}
+.ContainerDetails:hover{
+transform: scale(1.1);
+ 
+}
+.ContainerDetails img{
+width: 100%;
+height: 225px;
+ 
+border-radius: 5px 5px 5px 5px;
+}
+.Div_Details_Info{
+    width: 90%;
+  height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+      gap: 3px;
+    
+    
+}
+.Div_Details_Info button{
+    width: 100%;
+    height:40px ;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+   color: white;
+    justify-content: space-around;
+        background-color: #4299E1;
+ 
+}
+
+.Div_Details_Info  button:hover{
+background-color: #3182CE;
+}
+ 
+.Item_Details_Info{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.Item_Details_Info h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: #60a5fa;
+    text-align: start;
+}
+.Item_Details_Info span{
+    font-size: 15px;
+ color: #e5e7ebb3;
+    font-weight: 500;
+}
+.Item_Details_Info h3{
+    font-size: 23px;
+    font-weight: 700;
+    color: #22c55e;
+   
+}
+.Item_Details_Info  p{
+    font-size: 15px;
+font-weight: 500;
+ color: #e5e7ebb3;
+    
+}
+.Caract_Detail{
+    width: 87%;
+    height:auto;
+       display: flex;
+       flex-direction: column;
+
+}
+.Caract_Detail h3{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+ 
+     
+}
+.Caract_Detail ul{
+    width: 100%;
+    height: auto;
+   padding: 5px;
+   margin-left: 20px;
+     
+}
+.Caract_Detail ul li{
+font-size: 14px;
+    font-weight: 500;
+    color: #e5e7ebb3;
+}
+.VerDetalles{
+    background-color: #22c55e;
+    width: 300px;
+    height: 50px;
+ border: none;
+ border-radius: 6px;
+     text-decoration: none;
+ color: white;
+  font-weight: 700;
+       font-size: 20px;
+}
+ .DatabaseLoading{
+   font-size: 25px;
+ }
+ .DatabaseLoading i{
+    font-size: 25px;
+    font-weight: 700;
+  
+    color: white;
+ }
+@media screen and (max-width: 470px){
+    *{
+ font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.HomeContainer{
+    width: 95%;
+    height: 100%;
+    max-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ gap: 35px;
+ 
+}
+.HomeContainer h2{
+    font-size: 35px;
+    font-weight: 700;
+    color: #3182CE;
+}
+.Container{
+    width: 90%;
+    height: auto;
+    display: grid;
+      justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1,auto);
+    gap: 25px;
+ 
+}
+.ContainerDetails img{
+width: 100%;
+height: 150px;
+ 
+border-radius: 5px 5px 5px 5px;
+}
+.ContainerDetails{
+     width: 435px;
+    height: auto;
+ background-color: #374151;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-radius: 7px 7px 7px 7px;  
+    
+ 
+}
+.ContainerDetails:hover{
+transform: scale(1.1 );
+}
+ 
+.Div_Details_Info{
+    width: 90%;
+  height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+      gap: 3px;
+    padding: 20px;
+    
+}
+.Div_Details_Info button{
+    width: 100%;
+    height:40px ;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+   color: white;
+    justify-content: space-around;
+        background-color: #4299E1;
+ 
+}
+
+.Div_Details_Info  button:hover{
+background-color: #3182CE;
+}
+ 
+.Item_Details_Info{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.Item_Details_Info h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: #60a5fa;
+}
+.Item_Details_Info span{
+    font-size: 15px;
+ color: #e5e7ebb3;
+    font-weight: 500;
+}
+.Item_Details_Info h3{
+    font-size: 23px;
+    font-weight: 700;
+    color: #22c55e;
+   
+}
+.Item_Details_Info  p{
+    font-size: 15px;
+font-weight: 500;
+ color: #e5e7ebb3;
+    
+}
+.Caract_Detail{
+    width: 87%;
+    height:120px;
+       display: flex;
+       flex-direction: column;
+
+}
+.Caract_Detail h3{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+ 
+     
+}
+.Caract_Detail ul{
+    width: 100%;
+    height: auto;
+   padding: 5px;
+   margin-left: 20px;
+     
+}
+.Caract_Detail ul li{
+font-size: 14px;
+    font-weight: 500;
+    color: #e5e7ebb3;
+}
+.VerDetalles{
+    background-color: #22c55e;
+    width: 300px;
+    height: 50px;
+ border: none;
+ border-radius: 6px;
+     text-decoration: none;
+ color: white;
+  font-weight: 700;
+       font-size: 20px;
+}
+ 
+}

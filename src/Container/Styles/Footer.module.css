@@ -1,0 +1,26 @@
+.Footer{
+    width: auto;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      background-color: #374151;
+      padding: 20px;
+      gap: 5px;
+       
+}
+.Footer p{
+font-size: 15px;
+      font-weight: 500;
+        color: #d1d5db;
+        text-align: center;
+}
+
+@media screen and (max-width: 470px){
+
+  .Footer{
+    width: 430px;
+     height: auto;
+        background-color: #374151;
+  }
+}
