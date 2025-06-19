@@ -13,8 +13,12 @@ function HomeContent() {
       try {
         const response = await fetch("https://localhost:3000/GetData", {
           method: "GET",
-          headers: {'Cache-Control': 'no-cache',
-    'Pragma': 'no-cache' },
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      },
           credentials:"include"
         });
         const result = await response.json();

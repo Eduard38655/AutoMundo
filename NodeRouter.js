@@ -33,7 +33,8 @@ app.use(cors({
       'https://automundo.onrender.com/AutoMundo-Nosotros',
       'https://automundo.onrender.com/AutoMundo-Contacto', 
       'https://eduard38655.github.io/AutoMundo/AutoMundo-Coches',
-      'https://eduard38655.github.io/AutoMundo'
+      'https://eduard38655.github.io/AutoMundo',
+      'https://localhost:3000/GetData',
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
