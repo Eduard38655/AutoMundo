@@ -35,28 +35,28 @@ function HomeContent() {
 
         {featuredCars.length > 0 ? (
           featuredCars.map((auto,index) => (
-            
-            <div key={auto.AutoID} className={Styles.ContainerDetails} onClick={(e)=>SetProducto(auto.AutoID)}>
 
-              <img src={auto.IMG} alt="" />
+            <div key={auto.autoid} className={Styles.ContainerDetails} onClick={(e)=>SetProducto(auto.autoid)}>
+
+              <img src={auto.img} alt="" />
               
               <div className={Styles.Div_Details_Info}>
                 <div className={Styles.Item_Details_Info}>
-                  <h2>{auto.TipoAuto}</h2>
+                  <h2>{auto.tipoauto}</h2>
                   <span>
-                    {auto.Marcas} - {auto.YearMarca}
+                    {auto.marcas} - {auto.yearmarca}
                   </span>
-                  <h3>${auto.Precio}</h3>
-                  <p>{auto.Description}</p>
+                  <h3>${auto.precio}</h3>
+                  <p>{auto.description}</p>
                 </div>
 
                 <div className={Styles.Caract_Detail}>
                   <h3>Características:</h3>
                   <ul>
-                    <li>{auto.Carac_Interior}</li>
-                    <li>{auto.Carac_Motor}</li>
-                    <li>{auto.Carac_Sistemas}</li>
-                    <li>{auto.Carac_Velocidad}</li>
+                    <li>{auto.carac_interior}</li>
+                    <li>{auto.carac_motor}</li>
+                    <li>{auto.carac_sistemas}</li>
+                    <li>{auto.carac_velocidad}</li>
                   </ul>
                 </div>
 <ButtonVerDetalles/>
