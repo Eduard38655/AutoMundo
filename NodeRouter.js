@@ -46,13 +46,13 @@ app.use(express.urlencoded({ extended: true }));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, 'index.html','AutoMundo','src','Container','HomeComponents')));
+app.use(express.static(path.join(__dirname, 'index.html','AutoMundo/AutoMundo','AutoMundo','src','Container','HomeComponents',)));
  
 // 3) Tus routers
 app.use('/', GetData);
 app.use('/', SubmitMessage);
  
-const PORT = process.env.PORT_APP || 3000;
+const PORT = 3000;
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor escuchando en http://0.0.0.0:${PORT}`);

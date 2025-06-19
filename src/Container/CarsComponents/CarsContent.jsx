@@ -47,7 +47,7 @@ function CarsContent({ data, setData }) {
                 <div className={Styles.Caract_Detail}>
                   <h3>Características:</h3>
                   <ul>
-                     <p>aoa</p>
+                   
                     <li>{auto.carac_interior}</li>
                     <li>{auto.carac_motor}</li>
                     <li>{auto.carac_sistemas}</li>
