@@ -36,7 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 3) Tus routers
 app.use('/', GetData);
 app.use('/', SubmitMessage);
-
+app.get("/", (req, res) => {
+  res.send("API REACTIVA: rutas activas → GET /GetData, POST /SubmitMessage");
+});
 const PORT = process.env.PORT_APP || 3000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor escuchando en http://0.0.0.0:${PORT}`);
