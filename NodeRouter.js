@@ -33,12 +33,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'public')));
 
+ 
 // 3) Tus routers
 app.use('/', GetData);
 app.use('/', SubmitMessage);
-app.get("/", (req, res) => {
-  res.send("API REACTIVA: rutas activas → GET /GetData, POST /SubmitMessage");
+ 
+app.all('/*splat', (req, res) => {
+  res.status(404).send(`La URL ${req.originalUrl} no existe.`);
 });
+
 const PORT = process.env.PORT_APP || 3000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor escuchando en http://0.0.0.0:${PORT}`);
