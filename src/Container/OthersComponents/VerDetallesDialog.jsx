@@ -12,7 +12,7 @@ const{ Data,SetData}=useContext(MoreDetailsContext)
  
  
   useEffect(()=>{    
-const Filter=ResetData.filter((item)=>item.AutoID==ProductoID)
+const Filter=ResetData.filter((item)=>item.autoid==ProductoID)
 SetData(Filter)
 SetActivateVerD(false)
  
@@ -34,8 +34,8 @@ SetActivateVerD(false)
       <div className={Styles.Div_Sub_Container}>
 
 <div className={Styles.Div_Title}>
-<h2 key={index}>{item.TipoAuto}</h2>
-<p>{item.Description}</p>
+<h2 key={index}>{item.tipoauto}</h2>
+<p>{item.description}</p>
 </div>
  
     

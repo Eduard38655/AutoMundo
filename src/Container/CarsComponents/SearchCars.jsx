@@ -7,8 +7,7 @@ function SearchInput({data, setData,ResetData,SetResetData}) {
 
 const [InputValue,SetVaue]=useState("")
  
- console.log("Input:",InputValue);
- console.log("Reset: ",ResetData);
+ 
   useEffect(() => {
   // 1. Si no hay filtros, mostrar todo
   if (InputValue === "" && GetMarca === "Todas las Marcas") {
@@ -18,8 +17,8 @@ const [InputValue,SetVaue]=useState("")
 
   // 2. Aplicar filtro condicional
   const filteredData = ResetData.filter((e) => {
-    const tipoMatch = InputValue === "" || e.TipoAuto.toUpperCase().startsWith(InputValue.toUpperCase());
-    const marcaMatch = GetMarca === "Todas las Marcas" || e.Marcas.toUpperCase().startsWith(GetMarca.toUpperCase());
+    const tipoMatch = InputValue === "" || e.tipoauto.toUpperCase().startsWith(InputValue.toUpperCase());
+    const marcaMatch = GetMarca === "Todas las Marcas" || e.marcas.toUpperCase().startsWith(GetMarca.toUpperCase());
     return tipoMatch && marcaMatch;
   });
 
@@ -42,7 +41,7 @@ const [InputValue,SetVaue]=useState("")
     <select name="" id=""  onChange={(e)=>SetGetMarca(e.target.value)}><option value="Todas las Marcas">Todas las Marcas</option>
    
     { ResetData.map((item,index)=>(
-      <option key={item.AutoID} value={item.Marcas}>{item.Marcas}</option>
+      <option key={item.autoid} value={item.marcas}>{item.marcas}</option>
     )) }
     
     </select>

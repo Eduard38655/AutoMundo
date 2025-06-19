@@ -31,6 +31,7 @@ function CarsContent({ data, setData }) {
         {currentItems.length > 0 ? (
           currentItems.map((auto) => (
             <div key={auto.autoid} className={Styles.ContainerDetails}  onClick={(e)=>SetProducto(auto.autoid)}>
+           
               <img src={auto.img} alt={auto.tipoauto} />
               <div className={Styles.Div_Details_Info}>
                 <div className={Styles.Item_Details_Info}>
