@@ -17,7 +17,7 @@ function App() {
     <Dialog_Contexto > 
     <MoreDetailsContext> 
      
-    <BrowserRouter  basename="/AutoMundo-Responsive-App"  >
+    <BrowserRouter  basename="/AutoMundo"  >
       <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/AutoMundo-Coches" element={<CarsMainPage />} />
