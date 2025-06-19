@@ -39,7 +39,8 @@ app.use('/', GetData);
 app.use('/', SubmitMessage);
  
 app.all('/*splat', (req, res) => {
-  res.status(404).send(`La URL ${req.originalUrl} no existe.`);
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+
 });
 
 const PORT = process.env.PORT_APP || 3000;
