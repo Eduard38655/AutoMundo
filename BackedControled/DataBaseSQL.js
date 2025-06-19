@@ -3,9 +3,7 @@ dotenv.config();
 
 const dbConfig = {
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false // Importante para Render
-  }
+  ssl:false
 };
 
 export default dbConfig;
