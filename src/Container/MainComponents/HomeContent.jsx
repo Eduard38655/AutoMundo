@@ -11,9 +11,10 @@ function HomeContent() {
   useEffect(() => {
     const DetData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/GetData", {
+        const response = await fetch("https://localhost:3000/GetData", {
           method: "GET",
-          headers: { "content-type": "application/json" },
+          headers: {'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache' },
           credentials:"include"
         });
         const result = await response.json();

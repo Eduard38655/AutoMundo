@@ -18,7 +18,7 @@ function App() {
     <MoreDetailsContext> 
      
     <BrowserRouter  basename="/AutoMundo"  >
-      <Routes>
+      <Routes>  
       <Route path="/" element={<MainPage />} />
       <Route path="/AutoMundo-Coches" element={<CarsMainPage />} />
       <Route path="/AutoMundo-Nosotros" element={<Nosotros />} />
