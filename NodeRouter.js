@@ -17,7 +17,10 @@ app.use(cors({
       "http:// 255.255.240.0/",
       "http://172.30.208.1/",
       "http://172.30.208.1/",
-      'http://192.168.1.xxx:5173'
+      'http://localhost:3000/GetData',
+      'http://localhost:3000/SubmitMessage',
+      'http://localhost:3000/ ',
+      'https://eduard38655.github.io'
       
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
