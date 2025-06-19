@@ -30,6 +30,7 @@ router.get("/GetData", async (req, res) => {
 `);
 
     res.status(200).json({ data: result.rows });
+    
   } catch (err) {
     console.error("Error retrieving data:", err);
     res.status(500).json({ message: "Error retrieving data" });
