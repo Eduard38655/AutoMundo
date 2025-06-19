@@ -34,8 +34,10 @@ function CarsContent({ data, setData }) {
            
               <img src={auto.img} alt={auto.tipoauto} />
               <div className={Styles.Div_Details_Info}>
+                 
                 <div className={Styles.Item_Details_Info}>
                   <h2>{auto.tipoauto}</h2>
+                  
                   <span>
                     {auto.marcas} - {auto.yearmarca}
                   </span>
@@ -45,6 +47,7 @@ function CarsContent({ data, setData }) {
                 <div className={Styles.Caract_Detail}>
                   <h3>Características:</h3>
                   <ul>
+                     <p>aoa</p>
                     <li>{auto.carac_interior}</li>
                     <li>{auto.carac_motor}</li>
                     <li>{auto.carac_sistemas}</li>
