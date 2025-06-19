@@ -31,13 +31,13 @@ app.use(express.urlencoded({ extended: true }));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, 'AutoMundo/AutoMundo')));
+app.use(express.static(path.join(__dirname, 'AutoMundo/AutoMundo/index.html')));
 
 
  
  
 // 3) Tus routers
-app.use('/GetData', GetData);
+app.use('', GetData);
 app.use('/', SubmitMessage);
 
  
