@@ -29,6 +29,7 @@ router.get("/GetData", async (req, res) => {
   INNER JOIN caracteristicas c ON a.carac_id = c.carac_id;
 `);
 
+
     res.status(200).json({ data: result.rows });
     
   } catch (err) {

@@ -17,6 +17,7 @@ function HomeContent() {
           credentials:"include"
         });
         const result = await response.json();
+        console.log(result.data,"se ha cargado los datos correctamente");
         setData(result.data || []);
       } catch (err) {
         console.error("Error fetching data:", err);
