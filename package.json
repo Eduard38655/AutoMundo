@@ -16,7 +16,9 @@
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.43.0",
-    "fsevents": "^1.2.9"
+    "fsevents": "^1.2.9",
+    "@rollup/rollup-linux-x64-gnu": "4.43.0"
+
   },
   "resolutions": {},
   "dependencies": {
@@ -53,5 +55,6 @@
     "globals": "^16.0.0",
     "node": "^24.2.0",
     "vite": "^6.3.5"
+     
   }
 }
