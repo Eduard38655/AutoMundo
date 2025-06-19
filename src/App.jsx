@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { Route, HashRouter as Router, Routes } from "react-router-dom"; // Cambio importante aquí
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import Dialog_Contexto from "../src/ContextData/Context.jsx";
 import MoreDetailsContext from "../src/ContextData/moreDetails.jsx";
 import LoadingLazy from "./Container/OthersComponents/LoadingLazy.jsx";
@@ -16,8 +16,8 @@ function App() {
     <Suspense fallback={<LoadingLazy />}> 
       <Dialog_Contexto> 
         <MoreDetailsContext> 
-          {/* Cambiamos BrowserRouter por HashRouter */}
-          <Router basename="/AutoMundo">
+          {/* SOLUCIÓN: Elimina el basename o ajústalo correctamente */}
+          <Router>
             <Routes>
               <Route path="/" element={<MainPage />} />
               <Route path="/AutoMundo-Coches" element={<CarsMainPage />} />
