@@ -33,11 +33,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+ 
  
 // 3) Tus routers
 app.use('/', GetData);
 app.use('/', SubmitMessage);
+
  
+
  
 
 const PORT = process.env.PORT_APP || 3000;
