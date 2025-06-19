@@ -20,7 +20,9 @@ app.use(cors({
       'http://localhost:3000/GetData',
       'http://localhost:3000/SubmitMessage',
       'http://localhost:3000/ ',
-      'https://eduard38655.github.io'
+      'https://eduard38655.github.io',
+      ' http://172.30.208.1:5173/AutoMundo/',
+      'http://10.0.0.86:5173/AutoMundo/'
       
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
