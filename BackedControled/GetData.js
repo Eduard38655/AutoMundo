@@ -5,7 +5,7 @@ const { Pool } = pkg;
 
 const router = express.Router();
 const pool = new Pool(dbConfig); // usa el config correcto
-
+/*Routes Data */
 router.get("/GetData", async (req, res) => {
   try {
    const result = await pool.query(`
