@@ -1,5 +1,5 @@
-import dotenv from "dotenv";
-dotenv.config();
+import "dotenv/config";
+ 
 
 const dbConfig = {
   connectionString: process.env.DATABASE_URL,
