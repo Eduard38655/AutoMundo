@@ -3,7 +3,7 @@ dotenv.config();
 
 const dbConfig = {
   connectionString: process.env.DATABASE_URL,
-  ssl:false
+  ssl:true
 };
 
 export default dbConfig;
