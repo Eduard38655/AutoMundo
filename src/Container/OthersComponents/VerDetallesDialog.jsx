@@ -30,7 +30,7 @@ SetActivateVerD(false)
    {Data.map((item,index)=>(
   <div className={Styles.SubContainer} key={index}>
 
-<img src={item.IMG} alt="" />
+<img src={item.img} alt="" />
       <div className={Styles.Div_Sub_Container}>
 
 <div className={Styles.Div_Title}>
@@ -42,10 +42,10 @@ SetActivateVerD(false)
 <div className={Styles.Div_Caracteristicas}>
   <h3>Caracteristicas Destacados</h3>
   <br />
-  <p><span><i className="fa-solid fa-check"></i></span>{item.Carac_Interior}</p>
-  <p><span><i className="fa-solid fa-check"></i></span>{item.Carac_Motor}</p>
-  <p><span><i className="fa-solid fa-check"></i></span>{item.Carac_Sistemas}</p>
-  <p><span><i className="fa-solid fa-check"></i></span>{item.Carac_Velocidad}</p>
+  <p><span><i className="fa-solid fa-check"></i></span>{item.carac_interior}</p>
+  <p><span><i className="fa-solid fa-check"></i></span>{item.carac_motor}</p>
+  <p><span><i className="fa-solid fa-check"></i></span>{item.carac_sistemas}</p>
+  <p><span><i className="fa-solid fa-check"></i></span>{item.carac_velocidad}</p>
 </div>
 <Link to={"/AutoMundo-Coches"}>      
       <button className={Styles.Ver_Info}>Explorar todos los coches</button>

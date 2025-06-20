@@ -7,19 +7,17 @@ import Styles from "../Styles/HomeContent.module.css";
 function HomeContent() {
   const [data, setData] = useState([]);
  const{ ProductoID,SetProducto}=useContext(MoreDetailsContext)
-
   useEffect(() => {
     const DetData = async () => {
       try {
-        const response = await fetch("https://localhost:3000/GetData");
+        const response = await fetch("http://localhost:3000/GetData");
         const result = await response.json();
-        console.log(result.data,"se ha cargado los datos correctamente");
         setData(result.data || []);
       } catch (err) {
         console.error("Error fetching data:", err);
       }
     };
-
+ 
     DetData();
   }, []);
 

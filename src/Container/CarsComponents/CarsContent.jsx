@@ -28,6 +28,7 @@ function CarsContent({ data, setData }) {
   return (
     <div className={Styles.HomeContainer}>
       <div className={Styles.Container} >
+        
         {currentItems.length > 0 ? (
           currentItems.map((auto) => (
             <div key={auto.autoid} className={Styles.ContainerDetails}  onClick={(e)=>SetProducto(auto.autoid)}>

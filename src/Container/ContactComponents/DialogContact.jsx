@@ -8,8 +8,6 @@ function DialogContact() {
   const {OpenDialog,SetOpenDialog}=useContext(Dialog_Contexto)
   const {Errores,SetErrores}=useContext(Dialog_Contexto)
 
- 
-
     return(<div className={Styles.DivDialog} >
      {OpenDialog ?(<>
     {ValidationJoi ?(
