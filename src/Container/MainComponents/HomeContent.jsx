@@ -7,6 +7,7 @@ import Styles from "../Styles/HomeContent.module.css";
 function HomeContent() {
   const [data, setData] = useState([]);
  const{ ProductoID,SetProducto}=useContext(MoreDetailsContext)
+ 
   useEffect(() => {
     const DetData = async () => {
       try {
