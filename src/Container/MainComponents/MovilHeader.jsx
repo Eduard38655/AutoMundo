@@ -14,7 +14,7 @@ function MobileHeader(params) {
  
 <Link to={"/"} className={Styles.Link}><h1><span>Auto</span>Mundo</h1></ Link >
 
- {ActiveMenu? ( 
+ {ActiveMenu ? ( 
 <button onClick={(e)=>SetMenu(false)}><i className="fa-solid fa-x"></i></button>) : (
 <button onClick={(e)=>SetMenu(true)}><i className="fa-solid fa-bars"></i> </button>
 )}
@@ -24,7 +24,7 @@ function MobileHeader(params) {
       {ActiveMenu ?(<>
       <div className={Styles.Div_Ul}>
     <ul>
-        <Link to={"/"} className={Styles.Link}><li   onClick={valor}>Inicio</li></ Link >
+        <Link to={"/"} className={Styles.Link}><li>Inicio</li></ Link >
         <Link to={"/AutoMundo-Coches"} className={Styles.Link}><li>Coches</li></ Link >
         <Link to={"/AutoMundo-Nosotros"} className={Styles.Link}><li>Nosotros</li></ Link >
         <Link to={"/AutoMundo-Contacto"} className={Styles.Link}><li>Contacto</li></ Link >
