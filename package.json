@@ -5,6 +5,7 @@
   "type": "module",
   "description": "...",
   "main": "eslint.config.js",
+   "proxy": "http://localhost:3000",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite --host",
@@ -16,7 +17,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "proxy": "http://localhost:3000"
   },
   "dependencies": {
     "cors": "^2.8.5",

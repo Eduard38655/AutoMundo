@@ -11,7 +11,7 @@ function HomeContent() {
   useEffect(() => {
     const DetData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/GetData");
+        const response = await fetch("/GetData");
         const result = await response.json();
         setData(result.data || []);
       } catch (err) {
