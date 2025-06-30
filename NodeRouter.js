@@ -21,7 +21,8 @@ const whitelist = process.env.NODE_ENV === 'production'
 
 app.use(cors({
   origin: (origin, cb) => {
-    if (!origin) return cb(null, true);           // Postman o curl
+    // permitir peticiones sin origen (Postman, curl)
+    if (!origin) return cb(null, true);
     if (whitelist.includes(origin)) return cb(null, true);
     cb(new Error(`Origin ${origin} no autorizado`));
   },
@@ -32,19 +33,20 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Montar routers bajo /api
+// Rutas de API bajo /api
 app.use('/api', GetData);
 app.use('/api', SubmitMessage);
 
-// Servir React build en producción
+// En producción, servir el build de React
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client', 'build')));
+  const clientBuildPath = path.join(__dirname, 'client', 'build');
+  app.use(express.static(clientBuildPath));
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.join(clientBuildPath, 'index.html'));
   });
 }
 
-// Arrancar servidor
+// Levantar el servidor
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 app.listen(PORT, HOST, () => {
