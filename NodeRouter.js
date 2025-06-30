@@ -8,53 +8,45 @@ import GetData from './BackedControled/GetData.js';
 import SubmitMessage from './BackedControled/SubmitMessage.js';
 
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// CORS dinámico
+const whitelist = process.env.NODE_ENV === 'production'
+  ? [
+      'https://eduard38655.github.io',
+      'https://automundo.onrender.com'
+    ]
+  : ['http://localhost:5173'];
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'http://10.0.0.86:5173',
-    'http://10.0.0.86:5173/AutoMundo/',
-    "http://172.30.208.1:5173/",
-      "http:// 255.255.240.0/",
-      "http://172.30.208.1/",
-      "http://172.30.208.1/",
-      'http://localhost:3000/GetData',
-      'http://localhost:3000/SubmitMessage',
-      'http://localhost:3000/ ',
-      'https://eduard38655.github.io',
-      ' http://172.30.208.1:5173/AutoMundo/',
-      'http://10.0.0.86:5173/AutoMundo/',
-      'https://automundo.onrender.com',
-      'https://automundo.onrender.com/GetData',
-      'https://automundo.onrender.com/SubmitMessage',
-      'https://automundo.onrender.com/',
-      'https://automundo.onrender.com/AutoMundo/',
-      'https://automundo.onrender.com/AutoMundo-Coches',
-      'https://automundo.onrender.com/AutoMundo-Nosotros',
-      'https://automundo.onrender.com/AutoMundo-Contacto', 
-      'https://eduard38655.github.io/AutoMundo/AutoMundo-Coches',
-      'https://eduard38655.github.io/AutoMundo',
-      'https://localhost:3000/GetData',
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: (origin, cb) => {
+    if (!origin) return cb(null, true);
+    if (whitelist.includes(origin)) return cb(null, true);
+    cb(new Error(`Origin ${origin} no autorizado`));
+  },
   credentials: true
 }));
 
-// 2) Middlewares de body‑parsing y estáticos
+// Body‑parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, 'index.html','AutoMundo/AutoMundo','AutoMundo','src','Container','HomeComponents',)));
- 
-// 3) Tus routers
-app.use('/', GetData);
-app.use('/', SubmitMessage);
- 
-const PORT = 3000;
+// Routers en /api
+app.use('/api', GetData);
+app.use('/api', SubmitMessage);
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Servidor escuchando en http://0.0.0.0:${PORT}`);
+// Servir React build en producción
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client', 'build')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
+// Levantar servidor
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || '0.0.0.0';
+app.listen(PORT, HOST, () => {
+  console.log(`Servidor escuchando en http://${HOST}:${PORT}`);
 });
