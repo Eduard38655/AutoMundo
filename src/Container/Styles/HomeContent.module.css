@@ -84,11 +84,13 @@ border-radius: 5px 5px 5px 5px;
    color: white;
     justify-content: space-around;
         background-color: #4299E1;
+        cursor: pointer;
  
 }
 
 .Div_Details_Info  button:hover{
 background-color: #3182CE;
+cursor: pointer;
 }
  
 .Item_Details_Info{
@@ -157,6 +159,7 @@ font-size: 14px;
  color: white;
   font-weight: 700;
        font-size: 20px;
+       cursor: pointer;
 }
  .DatabaseLoading{
    font-size: 25px;
@@ -251,6 +254,7 @@ transform: scale(1.04);
    color: white;
     justify-content: space-around;
         background-color: #4299E1;
+        cursor: pointer;
  
 }
 

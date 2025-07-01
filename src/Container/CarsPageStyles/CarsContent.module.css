@@ -75,6 +75,7 @@ border-radius: 5px 5px 5px 5px;
    color: white;
     justify-content: space-around;
     background-color: #4299E1;
+    cursor: pointer;
  
 }
 
@@ -231,7 +232,7 @@ transform: scale(0.01);
    color: white;
     justify-content: space-around;
     background-color: #4299E1;
- 
+ cursor: pointer;
 }
 
 .Div_Details_Info{
