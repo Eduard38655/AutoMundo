@@ -1,42 +1,60 @@
-import { useEffect, useState } from "react"
-import CarsContent from "../CarsComponents/CarsContent.jsx"
-import SearchInput from "../CarsComponents/SearchCars.jsx"
-import Footer from "../MainComponents/Footer.jsx"
-import Header from "../MainComponents/Header.jsx"
-import MobileHeader from "../MainComponents/MovilHeader.jsx"
-function CarsMainPage(params) {
+ import { useEffect, useState } from "react";
+import CarsContent from "../CarsComponents/CarsContent.jsx";
+import SearchInput from "../CarsComponents/SearchCars.jsx";
+import Footer from "../MainComponents/Footer.jsx";
+import Header from "../MainComponents/Header.jsx";
+import MobileHeader from "../MainComponents/MovilHeader.jsx";
 
+ function CarsMainPage() {
   const [data, setData] = useState([]);
-  const [ResetData,SetResetData]=useState([])
+  const [resetData, setResetData] = useState([]);
+
+  // Vite expone las variables que comienzan por VITE_
+  const API_BASE = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    
-    const DetData = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/GetData",{
-          method:"GET",headers: {
-    'Authorization': 'Bearer mi-token-de-autorizacion',
-    'Content-Type': 'application/json'
-  }
+        const response = await fetch(`${API_BASE}/GetData`, {
+          method: "GET",
+          headers: {
+            Authorization: "Bearer mi-token-de-autorizacion",
+            "Content-Type": "application/json",
+          },
         });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
         const result = await response.json();
         setData(result.data || []);
-        SetResetData(result.data || [])
+        setResetData(result.data || []);
       } catch (err) {
         console.error("Error fetching data:", err);
       }
     };
 
-    DetData();
-  }, []);
+    fetchData();
+  }, [API_BASE]);
 
-   return(<>
- <Header/>
- <MobileHeader />
- <SearchInput data={data} setData={setData} ResetData={ResetData} SetResetData={SetResetData}/>
- <CarsContent data={data} setData={setData} ResetData={ResetData} SetResetData={SetResetData}/>
- <Footer />
-   </>)
+  return (
+    <>
+      <Header />
+      <MobileHeader />
+      <SearchInput
+        data={data}
+        setData={setData}
+        resetData={resetData}
+        setResetData={setResetData}
+      />
+      <CarsContent
+        data={data}
+        setData={setData}
+        resetData={resetData}
+        setResetData={setResetData}
+      />
+      <Footer />
+    </>
+  );
 }
 
  export default CarsMainPage
