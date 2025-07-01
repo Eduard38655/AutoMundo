@@ -1,54 +1,40 @@
-// client/src/components/CarsMainPage.jsx
-import { useEffect, useState } from 'react';
-import CarsContent from '../CarsComponents/CarsContent.jsx';
-import SearchInput from '../CarsComponents/SearchCars.jsx';
-import Footer from '../MainComponents/Footer.jsx';
-import Header from '../MainComponents/Header.jsx';
-import MobileHeader from '../MainComponents/MovilHeader.jsx';
+import { useEffect, useState } from "react"
+import CarsContent from "../CarsComponents/CarsContent.jsx"
+import SearchInput from "../CarsComponents/SearchCars.jsx"
+import Footer from "../MainComponents/Footer.jsx"
+import Header from "../MainComponents/Header.jsx"
+import MobileHeader from "../MainComponents/MovilHeader.jsx"
+function CarsMainPage(params) {
 
-function CarsMainPage() {
   const [data, setData] = useState([]);
-  const [resetData, setResetData] = useState([]);
-
-  const API = import.meta.env.VITE_API_BASE_URL;
+  const [ResetData,SetResetData]=useState([])
 
   useEffect(() => {
-    const fetchData = async () => {
+    
+    const DetData = async () => {
       try {
-        const res = await fetch(`${API}/GetData`, {
-          headers: { 'Content-Type': 'application/json' }
+        const response = await fetch("https://automundo.onrender.com/GetData", {
+          method: "GET",
+          headers: { "content-type": "application/json" },
         });
-        if (!res.ok) throw new Error(`Status ${res.status}`);
-        const json = await res.json();
-        setData(json.data);
-        setResetData(json.data);
+        const result = await response.json();
+        setData(result.data || []);
+        SetResetData(result.data || [])
       } catch (err) {
-        console.error('Error fetching data:', err);
+        console.error("Error fetching data:", err);
       }
     };
 
-    fetchData();
-  }, [API]);
+    DetData();
+  }, []);
 
-  return (
-    <>
-      <Header />
-      <MobileHeader />
-      <SearchInput
-        data={data}
-        setData={setData}
-        ResetData={resetData}
-        SetResetData={setResetData}
-      />
-      <CarsContent
-        data={data}
-        setData={setData}
-        ResetData={resetData}
-        SetResetData={setResetData}
-      />
-      <Footer />
-    </>
-  );
+   return(<>
+ <Header/>
+ <MobileHeader />
+ <SearchInput data={data} setData={setData} ResetData={ResetData} SetResetData={SetResetData}/>
+ <CarsContent data={data} setData={setData} ResetData={ResetData} SetResetData={SetResetData}/>
+ <Footer />
+   </>)
 }
 
-export default CarsMainPage;
+ export default CarsMainPage
