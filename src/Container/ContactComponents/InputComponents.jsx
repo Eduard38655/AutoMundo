@@ -20,7 +20,7 @@ async function HandleSubmit(params) {
  
 const response=await fetch("http://localhost:3000/Submit/Message",{
     method:"POST",
-    headers:{"content-type":"application/json"},
+    headers:{"content-type":"application/json" },
     body:JSON.stringify({Email,FullName,Asunto,Mensaje})
 })
 const data=await response.json()

@@ -35,11 +35,13 @@ app.use(cors({
       'https://eduard38655.github.io/AutoMundo/AutoMundo-Coches',
       'https://eduard38655.github.io/AutoMundo',
       'https://localhost:3000/GetData',
+      'https://automundo.onrender.com'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization',"Bearer mi-token-de-autorizacion"],
   credentials: true
 }));
+ 
 
 // 2) Middlewares de body‑parsing y estáticos
 app.use(express.json());
