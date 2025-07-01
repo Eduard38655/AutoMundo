@@ -9,52 +9,52 @@ import SubmitMessage from './BackedControled/SubmitMessage.js';
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'http://10.0.0.86:5173',
-    'http://10.0.0.86:5173/AutoMundo/',
-    "http://172.30.208.1:5173/",
-      "http:// 255.255.240.0/",
-      "http://172.30.208.1/",
-      "http://172.30.208.1/",
-      'http://localhost:3000/GetData',
-      'http://localhost:3000/SubmitMessage',
-      'http://localhost:3000/ ',
-      'https://eduard38655.github.io',
-      ' http://172.30.208.1:5173/AutoMundo/',
-      'http://10.0.0.86:5173/AutoMundo/',
-      'https://automundo.onrender.com',
-      'https://automundo.onrender.com/GetData',
-      'https://automundo.onrender.com/SubmitMessage',
-      'https://automundo.onrender.com/',
-      'https://automundo.onrender.com/AutoMundo/',
-      'https://automundo.onrender.com/AutoMundo-Coches',
-      'https://automundo.onrender.com/AutoMundo-Nosotros',
-      'https://automundo.onrender.com/AutoMundo-Contacto', 
-      'https://eduard38655.github.io/AutoMundo/AutoMundo-Coches',
-      'https://eduard38655.github.io/AutoMundo',
-      'https://localhost:3000/GetData',
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
+// 1) Configuración de CORS
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://eduard38655.github.io',
+  'https://automundo.onrender.com'
+];
 
-// 2) Middlewares de body‑parsing y estáticos
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      callback(new Error(`Origen ${origin} no permitido por CORS`));
+    },
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+  })
+);
+
+// 2) Middlewares de body-parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// 3) Directorio de archivos estáticos (build de tu front)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, 'index.html','AutoMundo/AutoMundo','AutoMundo','src','Container','HomeComponents',)));
- 
-// 3) Tus routers
-app.use('/', GetData);
-app.use('/', SubmitMessage);
- 
-const PORT = 3000;
+const clientBuildPath = path.join(__dirname, 'build'); 
+app.use(express.static(clientBuildPath));
 
-app.listen(PORT,   () => {
+// SPA fallback: cualquier ruta no API envía index.html
+app.get('*', (req, res, next) => {
+  const apiRoutes = ['/GetData', '/SubmitMessage'];
+  if (apiRoutes.some(route => req.path.startsWith(route))) {
+    return next();
+  }
+  res.sendFile(path.join(clientBuildPath, 'index.html'));
+});
+
+// 4) Montaje de routers
+app.use('/GetData', GetData);
+app.use('/SubmitMessage', SubmitMessage);
+
+// 5) Levantar servidor
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor escuchando en http://0.0.0.0:${PORT}`);
 });
