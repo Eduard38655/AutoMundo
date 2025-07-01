@@ -14,7 +14,7 @@ const [Run,SetRun]=useState(false)
 async function HandleData(params) {
    
       try {
-               const response = await fetch("http://localhost:3000/GetData",{
+               const response = await fetch("https://automundo.onrender.com/GetData",{
           method:"GET",headers: {
     'Authorization': 'Bearer mi-token-de-autorizacion',
     'Content-Type': 'application/json'
