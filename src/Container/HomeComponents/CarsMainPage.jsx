@@ -13,7 +13,7 @@ function CarsMainPage(params) {
     
     const DetData = async () => {
       try {
-        const response = await fetch("https://localhost:3000/GetData", {
+        const response = await fetch("http://localhost:3000/GetData", {
           method: "GET",
           headers: { "content-type": "application/json" },
         });
@@ -21,10 +21,8 @@ function CarsMainPage(params) {
         setData(result.data || []);
         SetResetData(result.data || [])
       } catch (err) {
-        console.error("Error fetching data:", err);
-      }
+        console.error("Error fetching data:", err);}
     };
-
     DetData();
   }, []);
 
