@@ -8,7 +8,7 @@ import GetData from './BackedControled/GetData.js';
 import SubmitMessage from './BackedControled/SubmitMessage.js';
 
 const app = express();
-
+app.use(cors())
 app.use(cors({
   origin: [
     'http://localhost:5173',
@@ -42,7 +42,7 @@ app.use(cors({
   credentials: true
 }));
  
-
+ 
 // 2) Middlewares de body‑parsing y estáticos
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
