@@ -14,10 +14,12 @@ const [Run,SetRun]=useState(false)
 async function HandleData(params) {
    
       try {
-               const response = await fetch("http://localhost:3000/GetData", {
-                 method: "GET",
-                 headers: { "content-type": "application/json" },
-               });
+               const response = await fetch("http://localhost:3000/GetData",{
+          method:"GET",headers: {
+    'Authorization': 'Bearer mi-token-de-autorizacion',
+    'Content-Type': 'application/json'
+  }
+        });
                const result = await response.json();
                SetData(result.data || []);
                

@@ -13,9 +13,11 @@ function CarsMainPage(params) {
     
     const DetData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/GetData", {
-          method: "GET",
-          headers: { "content-type": "application/json" },
+        const response = await fetch("http://localhost:3000/GetData",{
+          method:"GET",headers: {
+    'Authorization': 'Bearer mi-token-de-autorizacion',
+    'Content-Type': 'application/json'
+  }
         });
         const result = await response.json();
         setData(result.data || []);
