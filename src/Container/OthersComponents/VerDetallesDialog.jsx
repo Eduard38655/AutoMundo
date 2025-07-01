@@ -30,7 +30,10 @@ SetActivateVerD(false)
    {Data.map((item,index)=>(
   <div className={Styles.SubContainer} key={index}>
 
-<img src={item.img} alt="" />
+<div className={Styles.DivImg}>
+  <img src={item.img} alt="" />
+</div>
+
       <div className={Styles.Div_Sub_Container}>
 
 <div className={Styles.Div_Title}>

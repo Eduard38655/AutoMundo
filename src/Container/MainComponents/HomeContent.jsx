@@ -39,7 +39,9 @@ function HomeContent() {
 
             <div key={auto.autoid} className={Styles.ContainerDetails} onClick={(e)=>SetProducto(auto.autoid)}>
 
-              <img src={auto.img} alt="" />
+             <div className={Styles.DivImg}>
+               <img src={auto.img} alt="" />
+             </div>
               
               <div className={Styles.Div_Details_Info}>
                 <div className={Styles.Item_Details_Info}>

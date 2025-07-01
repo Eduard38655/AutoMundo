@@ -7,7 +7,7 @@
 }
 .HeaderContainer{
     width:auto;
-    height: 5px;
+    height: 25px;
     background-color: #1A202C;
        display: flex;
     flex-direction: row;
@@ -84,7 +84,7 @@ color: #63B3ED;
     display: none;
 }
 
-@media screen and (max-width: 470px) {
+@media (width<=700px) {
     .HeaderContainer{display: none;}
     
 .Container_Mobile_Inactive{
@@ -92,11 +92,11 @@ width: 100%;
 height:auto;
 display: grid;
 background-color: #1A202C;
- 
+ padding: 5px;
 }
  
 .DivMobile_Inactive{
-width: 100%;
+width: 97%;
 height: auto;
 display:grid;
 grid-template-columns: 85% 20px;
@@ -119,7 +119,7 @@ color: #63B3ED;
 width: 40px;
 height: 40px;
 background: none;
-font-size: 20px;
+font-size: 25px;
 color: gray;
 border: none;
 }
