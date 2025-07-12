@@ -7,7 +7,7 @@
     width: auto;
     height: 100%;
     display: flex;
- 
+ background-color: #111827;
     flex-direction: column;
     
 }

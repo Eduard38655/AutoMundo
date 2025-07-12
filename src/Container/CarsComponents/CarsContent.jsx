@@ -46,7 +46,7 @@ function CarsContent({ data, setData }) {
                     {auto.marcas} - {auto.yearmarca}
                   </span>
                   <h3>${auto.precio}</h3>
-                  <p>{auto.descripcion}</p>
+                  <p>{auto.description}</p>
                 </div>
                 <div className={Styles.Caract_Detail}>
                   <h3>Características:</h3>

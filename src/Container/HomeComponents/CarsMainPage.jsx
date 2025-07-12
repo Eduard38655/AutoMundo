@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import DataBase from "../../../BackedControled/DataBase.js"
 import CarsContent from "../CarsComponents/CarsContent.jsx"
 import SearchInput from "../CarsComponents/SearchCars.jsx"
 import Footer from "../MainComponents/Footer.jsx"
@@ -8,28 +9,18 @@ function CarsMainPage(params) {
 
   const [data, setData] = useState([]);
   const [ResetData,SetResetData]=useState([])
-
+ 
   useEffect(() => {
     
-    const DetData = async () => {
-      try {
-        const response = await fetch("https://automundo.onrender.com/GetData",{
-          method:"GET",headers: {
-    'Authorization': 'Bearer mi-token-de-autorizacion',
-    'Content-Type': 'application/json'
-  }
-        });
-        const result = await response.json();
-        setData(result.data || []);
-        SetResetData(result.data || [])
-      } catch (err) {
-        console.error("Error fetching data:", err);
-      }
-    };
-
-    DetData();
+    
+        setData(DataBase);
+        SetResetData(DataBase)
+     
   }, []);
 
+  
+
+   
    return(<>
  <Header/>
  <MobileHeader />

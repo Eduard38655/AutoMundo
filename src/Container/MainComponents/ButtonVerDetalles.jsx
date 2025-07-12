@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import DataBase from "../../../BackedControled/DataBase.js";
 import { MoreDetailsContext } from "../../ContextData/moreDetails.jsx";
+
 function ButtonVerDetalles( ) {
 
 const {VerProducto,SetVerProducto}=useContext(MoreDetailsContext)
@@ -13,21 +15,11 @@ const [Run,SetRun]=useState(false)
  
 async function HandleData(params) {
    
-      try {
-               const response = await fetch("https://automundo.onrender.com/GetData",{
-          method:"GET",headers: {
-    'Authorization': 'Bearer mi-token-de-autorizacion',
-    'Content-Type': 'application/json'
-  }
-        });
-               const result = await response.json();
-               SetData(result.data || []);
+       
                
-               SetResetData(result.data  );
+               SetResetData(DataBase);
                 SetActivateVerD(true)
-              } catch (err) {
-                console.error("Error fetching data:", err);
-              } 
+              
               
                
 } 

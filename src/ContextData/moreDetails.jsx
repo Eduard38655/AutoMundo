@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import DataBase from "../../BackedControled/DataBase.js";
 
 export const MoreDetailsContext=createContext();
 function MoreDetailsProvider({children}) {
@@ -7,7 +8,7 @@ function MoreDetailsProvider({children}) {
     const [ActivateVerD,SetActivateVerD]=useState(false)
     const [Data,SetData]=useState([]);
     const [ProductoID,SetProducto]=useState("")
-    const [ResetData,SetResetData]=useState([]);
+    const [ResetData,SetResetData]=useState(DataBase);
 
     return(
 

@@ -15,16 +15,15 @@ const [Mensaje,SetMensaje]=useState("")
 
  
 async function HandleSubmit(params) {
+   console.log("ff");
    
-
- 
-const response=await fetch("https://automundo.onrender.com/Submit/Message",{
+const response=await fetch("/Submit/Message",{
     method:"POST",
     headers:{"content-type":"application/json" },
     body:JSON.stringify({Email,FullName,Asunto,Mensaje})
 })
 const data=await response.json()
- console.log(data,"valores v");
+
  
 SetOpenDialog(true)
 SetJoinValidation(data.dataValor)

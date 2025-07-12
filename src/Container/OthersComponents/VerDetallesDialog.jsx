@@ -11,8 +11,13 @@ const{ Data,SetData}=useContext(MoreDetailsContext)
  const{ResetData,SetResetData}=useContext(MoreDetailsContext)
  
  
+ 
   useEffect(()=>{    
+    
+     
 const Filter=ResetData.filter((item)=>item.autoid==ProductoID)
+console.log(Filter,"Filter",ProductoID,"ProductoID");
+
 SetData(Filter)
 SetActivateVerD(false)
  

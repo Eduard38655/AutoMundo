@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import DataBase from "../../../BackedControled/DataBase.js";
 import { MoreDetailsContext } from "../../ContextData/moreDetails.jsx";
 import ButtonVerDetalles from "../MainComponents/ButtonVerDetalles.jsx";
 import Styles from "../Styles/HomeContent.module.css";
@@ -9,25 +10,13 @@ function HomeContent() {
  const{ ProductoID,SetProducto}=useContext(MoreDetailsContext)
  
   useEffect(() => {
-    const DetData = async () => {
-      try {
-        const response = await fetch("https://automundo.onrender.com/GetData",{
-          method:"GET",headers: {
-    'Authorization': 'Bearer mi-token-de-autorizacion',
-    'Content-Type': 'application/json'
-  }
-        });
-        const result = await response.json();
-        setData(result.data || []);
-      } catch (err) {
-        console.error("Error fetching data:", err);
-      }
-    };
- 
-    DetData();
+    
+        setData(DataBase);
+      
+  
   }, []);
 
-  const featuredCars = data.slice(0, 3); // mostrar solo 3
+  const featuredCars = data.slice(0, 3);  
 
   return (
     <div className={Styles.HomeContainer}>

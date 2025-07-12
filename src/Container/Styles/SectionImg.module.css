@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: flex-end;
     padding: 25px;
-   
+   background-color: #111827;
 }
  
 .ContainerIMG{
@@ -122,4 +122,12 @@ font-weight: 700;
     cursor: pointer;
     font-size: 14px;
 }
+}
+
+
+.root{
+    background-color: red;
+}
+#root{
+    background-color: red;
 }
