@@ -4,7 +4,6 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import GetData from './BackedControled/GetData.js';
 import SubmitMessage from './BackedControled/SubmitMessage.js';
 
 const app = express();
@@ -49,8 +48,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'index.html','AutoMundo/AutoMundo','AutoMundo','src','Container','HomeComponents',)));
  
-// 3) Tus routers
-app.use('/', GetData);
+
 app.use('/', SubmitMessage);
  
 const PORT = 3000;

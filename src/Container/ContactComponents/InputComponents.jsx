@@ -15,7 +15,7 @@ const [Mensaje,SetMensaje]=useState("")
 
  
 async function HandleSubmit(params) {
-   console.log("ff");
+
    
 const response=await fetch("/Submit/Message",{
     method:"POST",
